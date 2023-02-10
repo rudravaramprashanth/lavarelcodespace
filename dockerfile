@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo_mysql
 
 COPY . /var/www/html
+COPY composer.json /var/www/html/composer.json
 
 WORKDIR /var/www/html
 
